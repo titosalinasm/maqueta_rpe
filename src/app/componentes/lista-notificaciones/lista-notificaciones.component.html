@@ -1,0 +1,110 @@
+<div class="container fontregular">
+  <h3 class="fontbold">Mis Notificaciones</h3>
+  <div class="card">
+    <div class="card-body">
+      <div class="row mb-1">
+        <div class="col-sm-1">
+          <span>Asunto</span>
+        </div>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-sm-2">
+          <span for="staticEmail2">Fecha inicio</span>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="row mb-1">
+        <div class="col-sm-6"></div>
+        <div class="col-sm-2">
+          <span for="staticEmail2">Fecha fin</span>
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-sm-2">
+          <button
+            type="submit"
+            class="btn btn-success mb-3 boton_verde"
+            style="width: 150px; margin-bottom: 5px"
+          >
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="table-responsive tableshadow">
+    <table class="table table-bordered marginbutton0">
+      <tbody>
+        <tr>
+          <th scope="row" class="table_cabecera">Nro. Orden</th>
+          <th scope="row" class="table_cabecera">Remitente</th>
+          <th scope="row" class="table_cabecera">Asunto</th>
+          <th scope="row" class="table_cabecera">Fecha</th>
+          <th scope="row" class="table_cabecera">Acciones</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Administrador RPE</td>
+          <td>Se habilitó lista de Organizaciones RPE para el servicio 001</td>
+          <td>13/10/2022 18:20</td>
+          <td>
+            <span style="margin-right: 5px">
+              <button type="button" class="btn btn-outline-success btn-sm" (click)="openModalDetNotificacion(modal_detalle_notificacion)">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="p-2">
+      <div class="row">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#"> Atrás</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Siguiente</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modal_detalle_notificacion >
+  <div class="modal-header">
+    <h4 class="modal-title pull-left fontbold">CONFIRMACIÓN DE SERVICIO 001</h4>
+    <button
+      type="button"
+      class="close btn-close pull-right"
+      aria-label="Close"
+      (click)="modalRef?.hide()"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body fontregular">
+    <div class="row">
+      <div class="col">
+        <span>
+          <i class="fa fa-tags" aria-hidden="true"></i> Ya se encuentra disponible las lista de organizaciones RPE (admitidas) para el servicio "Servicio 001".
+        </span>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+

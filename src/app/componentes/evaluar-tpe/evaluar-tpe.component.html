@@ -1,0 +1,253 @@
+<div class="container fontregular">
+  <h3 class="fontbold">Evaluar TPE y Diagnostico</h3>
+  <div class="card">
+    <div class="card-body">
+      <div class="row mb-1">
+        <div class="col-sm-1" style="padding: 0px">
+          <span for="staticEmail2">RUC o Razón social</span>
+        </div>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-sm-2">
+          <span for="staticEmail2">Convocatoria</span>
+        </div>
+        <div class="col-sm-2">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>--Seleccionar--</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-sm-4"></div>
+      </div>
+
+      <div class="row mb-1">
+        <div class="col-sm-1" style="padding: 0px">
+          <span for="staticEmail2">Sector</span>
+        </div>
+        <div class="col-sm-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>--Seleccionar--</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-sm-2">
+          <span for="staticEmail2">Producto</span>
+        </div>
+        <div class="col-sm-2">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>--Seleccionar--</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="col-sm-4">
+          <button
+            type="submit"
+            class="btn btn-success mb-3 boton_verde"
+            style="width: 150px; margin-bottom: 5px"
+          >
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="table-responsive tableshadow">
+    <table class="table table-bordered marginbutton0">
+      <tbody>
+        <tr>
+          <th scope="row" class="table_cabecera">Nro. Orden</th>
+          <th scope="row" class="table_cabecera">Convocatoria</th>
+          <th scope="row" class="table_cabecera">RUC</th>
+          <th scope="row" class="table_cabecera">Razón Social</th>
+          <th scope="row" class="table_cabecera">Producto</th>
+          <th scope="row" class="table_cabecera">Fecha registro TPE</th>
+          <th scope="row" class="table_cabecera">Acciones</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Convocatoria 01</td>
+          <td>2096573823</td>
+          <td>Pepito SAC</td>
+          <td>ARÁNDANOS</td>
+          <td>13/10/2022 18:20</td>
+          <td>
+            <span style="margin: 5px">
+              <button
+                type="button"
+                class="btn btn-outline-success btn-sm"
+                (click)="
+                  openModalServiciosRecomendados(modal_servicios_recomendados)
+                "
+              >
+                <i class="fa fa-tags" aria-hidden="true"></i>
+              </button>
+            </span>
+            <span style="margin: 5px">
+              <button type="button" class="btn btn-outline-success btn-sm">
+                <i class="fa fa-file-text" aria-hidden="true"></i>
+              </button>
+            </span>
+            <span style="margin: 5px">
+              <button type="button" class="btn btn-outline-success btn-sm">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="p-2">
+      <div class="row">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#"> Atrás</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Siguiente</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modal_servicios_recomendados>
+  <div class="modal-header fontregular">
+    <h4 class="modal-title pull-left">SERVICIOS RECOMENDADOS</h4>
+    <button
+      type="button"
+      class="close btn-close pull-right"
+      aria-label="Close"
+      (click)="modalRef?.hide()"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body fontregular">
+
+    <div
+      class="card mb-1"
+      style="background-color: #da291c; border: 1px solid #da291c"
+      data-bs-toggle="collapse"
+      href="#collapseExample1"
+      role="button"
+      aria-expanded="true"
+      aria-controls="collapseExample1"
+
+    >
+      <div class="card-body text-white">Desarrollo Productivo</div>
+    </div>
+    <div class="collapse" id="collapseExample1">
+      <div class="card mb-1 p-2">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Capacitación y asistencia técnica para conocimiento y acceso a
+            certificaciones internacionales
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckChecked"
+          />
+          <label class="form-check-label" for="flexCheckChecked"> Otros </label>
+        </div>
+      </div>
+    </div>
+
+    <div
+    class="card mb-1"
+    style="background-color: #da291c; border: 1px solid #da291c"
+    data-bs-toggle="collapse"
+    href="#collapseExample2"
+    role="button"
+    aria-expanded="true"
+    aria-controls="collapseExample1"
+  >
+    <div class="card-body text-white">Desarrollo de Gestión Empresarial</div>
+  </div>
+  <div class="collapse" id="collapseExample2">
+    <div class="card mb-1 p-2">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Capacitación sobre sistema Perú Marketplace
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+        />
+        <label class="form-check-label" for="flexCheckChecked"> Otros </label>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="card mb-1"
+    style="background-color: #da291c; border: 1px solid #da291c"
+    data-bs-toggle="collapse"
+    href="#collapseExample3"
+    role="button"
+    aria-expanded="true"
+    aria-controls="collapseExample1"
+  >
+    <div class="card-body text-white">Comercio Exterior</div>
+  </div>
+  <div class="collapse" id="collapseExample3">
+    <div class="card mb-1 p-2">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Programa coaching exportador
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+        />
+        <label class="form-check-label" for="flexCheckChecked"> Otros </label>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</ng-template>

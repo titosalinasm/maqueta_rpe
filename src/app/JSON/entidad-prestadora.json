@@ -1,0 +1,37 @@
+{
+  "status": "Ok",
+  "statusDetail": "Ok",
+  "statusCode": 200,
+  "data": [
+      {
+          "identidadprestadora": 14,
+          "ruc": "313123",
+          "razonsocial": "Empresta Test",
+          "usuariocreacion": "flauro",
+          "fechacreacion": "2022-11-28",
+          "usuariomodificacion": "flauro",
+          "fechamodificacion": "2022-11-28",
+          "estadoregistro": true
+      },
+      {
+          "identidadprestadora": 15,
+          "ruc": "313123",
+          "razonsocial": "Empresta Test",
+          "usuariocreacion": "flauro",
+          "fechacreacion": "2022-11-28",
+          "usuariomodificacion": "flauro",
+          "fechamodificacion": "2022-11-28",
+          "estadoregistro": true
+      },
+      {
+          "identidadprestadora": 16,
+          "ruc": "313123",
+          "razonsocial": "Empresta Test",
+          "usuariocreacion": "flauro",
+          "fechacreacion": "2022-11-28",
+          "usuariomodificacion": "flauro",
+          "fechamodificacion": "2022-11-28",
+          "estadoregistro": true
+      }
+  ]
+}
